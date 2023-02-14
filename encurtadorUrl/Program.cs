@@ -31,9 +31,23 @@ if (diferencaValor < 0)
     Console.WriteLine("Você não pode comprar esse produto:");
 } else if(diferencaValor == 0)
 {
-    Console.WriteLine("Você pode pagar por esse produto");
+    Console.WriteLine("Você pode pagar por esse produto, porém não sobrará troco.");
 }else
 {
     Console.WriteLine("Você pode comprar esse produto e sobrará " + diferencaValor);
 }
 
+// switch case
+
+switch (diferencaValor)
+{
+    case 0:
+        Console.WriteLine("Você pode pagar por esse produto, porém não sobrará troco.");
+        break;
+    case < 0:
+        Console.WriteLine("Você não pode comprar esse produto:");
+        break;
+    default:
+        Console.WriteLine("Você pode comprar esse produto e sobrará " + diferencaValor);
+        break;
+}
